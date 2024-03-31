@@ -64,6 +64,9 @@ if [[ -r /usr/share/doc/pkgfile/command-not-found.zsh ]]; then
     source /usr/share/doc/pkgfile/command-not-found.zsh
     #export PKGFILE_PROMPT_INSTALL_MISSING=1
 fi
+### Load function for auto completion
+autoload -U compinit
+compinit
 
 
 ## Set key bindings
