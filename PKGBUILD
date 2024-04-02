@@ -1,7 +1,7 @@
 # Maintainer: wszqkzqk <wszqkzqk@qq.com>
  
 pkgname=easy-zsh-config
-pkgver=0.7.0
+pkgver=0.7.1
 pkgrel=1
 pkgdesc="A simple but fast and out of the box configuration of zsh powered by oh-my-posh and zsh pulgins."
 arch=(any)
@@ -10,13 +10,12 @@ license=("MIT")
 conflicts=("grml-zsh-config"
         "manjaro-zsh-config")
 depends=("zsh"
-        "oh-my-posh"
         "zsh-syntax-highlighting"
         "zsh-autosuggestions"
-        "zsh-history-substring-search"
-        "ttf-hack-nerd"
-        )
-optdepends=("pkgfile: to provide a function that will automatically search the pkgfile database when entering an unrecognized command")
+        "zsh-history-substring-search")
+optdepends=("oh-my-posh: to provide a theme engine"
+        "ttf-hack-nerd: to support nerd font used by oh-my-posh themes"
+        "pkgfile: to provide a function that will automatically search the pkgfile database when entering an unrecognized command")
 backup=("root/.zshrc"
         "etc/skel/.zshrc")
 install="easy-zsh-config.install"
@@ -25,7 +24,7 @@ source=("zshrc"
         "easy-zsh-config")
 sha256sums=('b647be9ef5fd3eb1e6587dbccaedeff2bf298c13e568ddfd4c436fadb8e9061f'
             '191f93567e767c599cfd843bb8343f311396d8e80d423ec38af2ad3dc52551a3'
-            '31dde1e2a80f54116cbc6da43f0a2a8376c4035c9b7aa0c4633944b98da0d185')
+            'af47baeb4107081fe359067fb9e4f26d9b0d09f90e86966f9edaec0045edf62c')
 
 package(){
     install -Dm644 zshrc "${pkgdir}/etc/skel/.zshrc"
