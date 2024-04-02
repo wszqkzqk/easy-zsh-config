@@ -10,7 +10,7 @@ else
 fi
 
 ## Apply the theme file
-if [[ -r "${_POSH_THEME}" ]] && which oh-my-posh &> /dev/null; then
+if [[ -r "${_POSH_THEME}" ]] && type oh-my-posh &> /dev/null; then
   export POSH_THEME=${_POSH_THEME}
   eval "$(oh-my-posh init zsh)"
 else
@@ -99,7 +99,7 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 ## Set alias 
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
-alias free='free -m'                                            # Show sizes in MB
+alias free='free -h'                                            # Human-readable sizes
 alias gitu='git add . && git commit && git push'
 alias ls='ls --color=auto'                                      # Set colored output of ls
 
