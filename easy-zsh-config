@@ -105,11 +105,14 @@ alias ls='ls --color=auto'                                      # Set colored ou
 
 
 ## Color man pages
-export LESS_TERMCAP_mb=$'\E[01;32m'
-export LESS_TERMCAP_md=$'\E[01;32m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;47;34m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;36m'
-export LESS=-R
+man() {
+  LESS_TERMCAP_mb=$'\E[01;31m'  # bold red
+  LESS_TERMCAP_md=$'\E[01;31m'  # bold red
+  LESS_TERMCAP_me=$'\E[0m'      # reset
+  LESS_TERMCAP_se=$'\E[0m'      # reset
+  LESS_TERMCAP_so=$'\E[01;44m' # bold blue
+  LESS_TERMCAP_ue=$'\E[0m'      # reset
+  LESS_TERMCAP_us=$'\E[01;32m' # bold green
+  LESS=-R
+  command man "$@"
+}
