@@ -4,5 +4,5 @@ cd $(dirname $0); pwd \
 &&makepkg --printsrcinfo > .SRCINFO \
 &&git add $(git ls-files) \
 &&git commit -s -m 'Update to a new version' \
-&&git push \
+&&git push origin \
 &&git push github

@@ -1,6 +1,6 @@
 # Easy Zsh Config
 
-- A simple but fast and out of the box configuration of zsh powered by oh-my-posh and zsh pulgins.
+- A simple but fast and out of the box configuration of zsh powered by oh-my-posh (optional) and zsh pulgins.
 
 ## Features
 
